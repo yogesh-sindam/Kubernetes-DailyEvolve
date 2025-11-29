@@ -162,3 +162,20 @@ IRSA
 `echo -n "ymldjglkjlfsjd=" | base64 --decode` --> admin_name_or_api_key_or_pass[decoded credential]
 
 `base64 secret.txt.b64 > secret.txt` [decode content in the file]
+
+
+**--from-literal=name_of_key=value_of_key**
+is used to crate a any thig dynamically or runtim using this parameter. typically used for create ConfigMap, Secret
+
+`kubectl create secret generic external_secret --from-literal=username=alex`
+`kubectl get secret external_secret -o ymal`
+```
+apiVersion: v1
+kind: Secret
+metadata:
+  name: external-secret
+type: Opaque
+data:
+  username: alex
+```
+
