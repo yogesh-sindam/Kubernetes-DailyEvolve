@@ -19,6 +19,15 @@ spec:
         image: nginx:1.14.2
         ports:
         - containerPort: 80
+        volumeMount:
+          - name: db-secret
+            mountPath: "/etc/dbcredentials"
+            readOnly: true
+
+      volume:
+      - name: db-secret
+      - secret: 
+          secretName: username
 
 # kubectl apply -f kubernetes-deployment.yml
 # this deployment is used to create a 3 pods using replicaset=3
@@ -27,3 +36,6 @@ spec:
 # kubectl get replicaset 
 # images useded to create a pod is nginx:1.14.2
 
+## use secrets, mount as file 
+# kubectl exec -it pod_name  -- cat /etc/dbcredentials
+Outpus: YWRtaW4= 
