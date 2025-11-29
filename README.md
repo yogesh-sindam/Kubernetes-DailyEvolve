@@ -165,6 +165,7 @@ IRSA
 
 
 **--from-literal=name_of_key=value_of_key**
+**--from-file=external_secret.txt** also used 
 is used to crate a any thig dynamically or runtim using this parameter. typically used for create ConfigMap, Secret
 
 `kubectl create secret generic external_secret --from-literal=username=alex`
