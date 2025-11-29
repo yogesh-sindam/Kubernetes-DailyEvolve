@@ -153,3 +153,12 @@ IRSA
 ##
 ### New Thing learn in kubrnetes 
 `'-' is not worked in k8s including files`
+
+## Encode and Decode in Base64
+`echo -n "admin_name_or_api_key_or_pass"  | base64 ` --> ymldjglkjlfsjd=[encoded string you can use it ]
+
+`base64 secret.txt > secret.txt.b64` [encode content in the file ]
+
+`echo -n "ymldjglkjlfsjd=" | base64 --decode` --> admin_name_or_api_key_or_pass[decoded credential]
+
+`base64 secret.txt.b64 > secret.txt` [decode content in the file]
