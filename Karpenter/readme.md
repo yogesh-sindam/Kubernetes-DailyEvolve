@@ -4,7 +4,7 @@
 
 Karpenter is a open source project, that scale the node depend on the workload requirement and provision the nodes.
 
-### how pod will be scduled 
+### How pod will be scduled 
 pod has tolation matching taint's `key, value, effect`
 
 ```
