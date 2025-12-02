@@ -181,3 +181,4 @@ data:
   username: alex
 ```
 
+frompodref at spec session to have pod details in container
