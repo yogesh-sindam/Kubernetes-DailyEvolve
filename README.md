@@ -181,4 +181,5 @@ data:
   username: alex
 ```
 
-frompodref at spec session to have pod details in container
+`--frompodref at spec session to have pod details in container` 
+` fieldref is used for ` 
