@@ -187,4 +187,4 @@ data:
 
 `-secretRef` use secret key from secret to and mention in container running inside the pod
 
-`configMapRef` use from configmap to and mention in container running inside the pod
+`configMapRef` use from configmap to and mention in container running inside the pod.
