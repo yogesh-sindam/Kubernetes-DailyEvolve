@@ -183,7 +183,20 @@ data:
 
 `--frompodref at spec session to have pod details in container` 
 
-` fieldref is used for ` 
+` feildRef is used for `  parse the pod details --> container
+```
+apiVersion: v1
+kind: Pod
+spec:
+  containers:
+  - name: app
+    image: myapp:latest
+    env:
+    - name: NODE_NAME
+      valueFrom:
+        fieldRef:
+          fieldPath: spec.nodeName
+```
 
 `-secretRef` use secret key from secret to and mention in container running inside the pod
 
