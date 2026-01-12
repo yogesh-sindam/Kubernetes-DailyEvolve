@@ -8,3 +8,7 @@ spec:
     app: mysql
   ports:
     - port: 3306
+
+
+# pod schedule with this service lable app: mysql
+# those pods will not have a ip, they get standard DNS for traffic routing
