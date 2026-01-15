@@ -15,7 +15,7 @@ backend:
 
 ```
 
-intially you are telling all traffic means(100%) will sent to service in name:my-app-stable
+intially you are telling all traffic means(100%) will sent to service in name:my-app-stable mentioned in `ingress.yaml`
 
 when you enable then trafficrouting 
 dynamically route the traffic to another service mention in `rollout.yaml` according to setWeight
