@@ -5,3 +5,4 @@ to delete unused object resource.
 
 `-a` to all not associated objects.
 
+docker commit contaierid newimaagename # create a new image form existed container
