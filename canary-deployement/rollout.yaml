@@ -1,0 +1,32 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Rollout
+metadata:
+  name: my-app
+spec:
+  replicas: 10
+  selector:
+    matchLabels:
+      app: my-app
+  template:
+    metadata:
+      labels:
+        app: my-app
+    spec:
+      containers:
+      - name: app
+        image: my-app:v2
+        ports:
+        - containerPort: 80
+
+  strategy:
+    canary:
+      stableService: my-app-stable # ping: service-name
+      canaryService: my-app-canary # pong: service-name
+      trafficRouting:
+        nginx:
+          stableIngress: my-app-ingress # initial stable/old service were all traffic sent
+      steps:
+      - setWeight: 10   # 10% new, 90% old
+      - pause:
+          duration: 5m
+      - setWeight: 100  # if rollout failed back to all 100 % traffic to stable/old service
