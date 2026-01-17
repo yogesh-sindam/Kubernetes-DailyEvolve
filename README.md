@@ -202,4 +202,4 @@ spec:
 
 
 parse the values to container form configmap runtime:
-`configMapRef` use from configmap to and mention in container running inside the pod.
+`configMapRef` use from configmap to and mention in container running inside the pod
