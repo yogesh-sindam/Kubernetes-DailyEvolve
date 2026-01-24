@@ -55,6 +55,8 @@ if this node not present karpenter provision the node to match the requirement, 
 
 ## This is highly sophisticated multi-tenent architecture where karpenter acts as an intelligent provisioner, creating the right type of nodes for the right type of workloads, ensuring the perfect isolation and resource optimization.
 
+#
+
 
 
 
