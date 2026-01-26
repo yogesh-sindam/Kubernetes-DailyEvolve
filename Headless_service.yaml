@@ -15,4 +15,7 @@ spec:
 # each pod get stable DNS Name
 ```
 pod-name.service-name.namespace.svc.cluster.local
+
+whenever the IP are not required for pod,
+then this HEADLESS service is used.
 ```
