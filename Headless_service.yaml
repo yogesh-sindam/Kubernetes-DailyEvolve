@@ -12,7 +12,7 @@ spec:
 
 # pod schedule with this service lable app: mysql
 # those pods will not have a ip, they get standard DNS for traffic routing
-# each pod get stable DNS Name
+# each pod get stable DNS Name.
 ```
 pod-name.service-name.namespace.svc.cluster.local
 
