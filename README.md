@@ -203,3 +203,5 @@ spec:
 
 parse the values to container form configmap runtime:
 `configMapRef` use from configmap to and mention in container running inside the pod.
+
+https://medium.com/@lazygeek78/system-design-of-api-gateway-e8924b71b7fb
