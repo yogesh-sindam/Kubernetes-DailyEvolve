@@ -42,4 +42,7 @@ jobs:
           name: temp
 
       - name: Check files
-        run: ls -ltr
+        run: |
+          ls -ltr
+          cd dist
+          cat app.txt
