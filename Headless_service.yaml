@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: db-headless
+spec:
+  clusterIP: None # this None will define the service is headless
+  selector:
+    app: mysql
+  ports:
+    - port: 3306
+
+
+# pod schedule with this service lable app: mysql
+# those pods will not have a ip, they get standard DNS for traffic routing
+# each pod get stable DNS Name
+```
+pod-name.service-name.namespace.svc.cluster.local
+
+whenever the IP are not required for pod,
+then this HEADLESS service is used.
+```

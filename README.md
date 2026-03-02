@@ -1,8 +1,9 @@
 ## How to install kubernetes cluster (kubeadm setup) on ubuntu:latest version
-## https://youtu.be/ScHDSoYzWN4?si=iuuK1xkSLAhDf0cp
+
+## watch this video https://youtu.be/ScHDSoYzWN4?si=iuuK1xkSLAhDf0cp
 #######################################################################
 
-## Kubernetes Nodes:
+## Kubernetes Nodes
 
 In a kubernetes cluster, you will encounter two distinct categories of nodes:
 
@@ -181,3 +182,29 @@ data:
   username: alex
 ```
 
+`--frompodref at spec session to have pod details in container` 
+
+` feildRef is used for `  parse the pod details --> container
+```
+apiVersion: v1
+kind: Pod
+spec:
+  containers:
+  - name: app
+    image: myapp:latest
+    env:
+    - name: NODE_NAME
+      valueFrom:
+        fieldRef:
+          fieldPath: spec.nodeName
+```
+
+`-secretRef` use secret key from secret to and mention in container running inside the pod
+
+
+parse the values to container form configmap runtime:
+`configMapRef` use from configmap to and mention in container running inside the pod.
+
+
+## api gatways design and implementation 
+https://medium.com/@lazygeek78/system-design-of-api-gateway-e8924b71b7fb
