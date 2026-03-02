@@ -1,4 +1,4 @@
-vapiVersion: apps/v1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nginx-deployment-practice
@@ -12,7 +12,7 @@ spec:
   template:
     metadata:
       labels:
-        app: nginx
+        app: nginxs
     spec:
       containers:
       - name: nginx
@@ -24,7 +24,7 @@ spec:
             mountPath: "/etc/dbcredentials"
             readOnly: true
 
-      volume:
+      - volume:
       - name: db-secret
       - secret: 
           secretName: username
