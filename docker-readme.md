@@ -11,3 +11,5 @@ docker commit contaierid newimaagename # create a new image form existed contain
 docker system prune -a #todelete unused  system resources
 
 docker container/image/network inspect <name_of_resource>
+
+docker
