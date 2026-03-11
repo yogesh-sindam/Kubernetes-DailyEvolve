@@ -9,7 +9,7 @@ aws-auth ConfigMap mapping
 
 Kubernetes RBAC
 
-******************
+*******************
 
 Dev logs in to AWS (IAM User or Role)
 
