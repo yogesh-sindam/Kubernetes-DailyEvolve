@@ -1,4 +1,4 @@
-## claim.yaml
+## pvc.yaml
 ```
 apiVersion: v1
 kind: PersistentVolumeClaim
