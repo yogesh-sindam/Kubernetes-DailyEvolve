@@ -12,7 +12,7 @@ spec:
         values: c7i.xlarge
       taints:
       - key: node.kubernetes.io/instance-type
-        value: "equal"
+        value: "app"
         effect: NoSchedule
   limits:
     nodes: 15  # Maximum nodes during scaling/drift
