@@ -11,7 +11,7 @@ pod has tolation matching taint's `key, value, effect`
  tolerations:
   - key: "node-type"
     operator: "Equal"
-    value: "application"
+    value: "app"
     effect: "NoSchedule"
 
  tolerations:
