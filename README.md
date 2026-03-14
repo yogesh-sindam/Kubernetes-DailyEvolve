@@ -41,7 +41,10 @@ Edit the /etc/hosts file  to include mapping of ip addresses to hostnames:
 $sudo nano /etc/hosts 
 172.31.0.1 master-node
 172.31.0.2 worker-node
+...
 ..
+..
+
 
 .
 also on if you are having more nodes
