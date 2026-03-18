@@ -1,0 +1,13 @@
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: pod-available for this app
+  namespace: dev-app
+spec:
+  selector:
+    matchlabels: 
+       app: app-dev #label matched with pod label
+
+  maxUnavailable: 50%
+
+# maxUnavailable 50% allow half of pods yo be disrupted, and half of pods are available at all time
