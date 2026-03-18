@@ -11,3 +11,4 @@ spec:
   maxUnavailable: 50%
 
 # maxUnavailable 50% allow half of pods yo be disrupted, and half of pods are available at all time
+# essential for node draining during upgrade
